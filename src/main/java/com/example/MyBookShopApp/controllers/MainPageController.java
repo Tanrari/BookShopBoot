@@ -30,7 +30,9 @@ public class MainPageController {
     public String authors(Model model){
 //        System.out.println(authorService.getAuthorsData().toString());
      model.addAttribute("authorData", authorService.getAuthorsData());
-        return "../authors/index";
+//        System.out.println(authorService.getAuthorsData().entrySet());
+       return "../authors/index";
+
     }
 
 
