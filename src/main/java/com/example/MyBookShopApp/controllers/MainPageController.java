@@ -17,11 +17,11 @@ public class MainPageController {
     @GetMapping("/genres")
     public String genres(){
         System.out.println("2");
-        return "genres";
+        return "../books/genres";
     }
 
     @GetMapping("/authors")
     public String authors(){
-        return "author";
+        return "../authors/index";
     }
 }
