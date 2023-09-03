@@ -26,9 +26,7 @@ public class AuthorService {
             return author;
 
         });
-//          Map<Character,List<String>> characters =    authors.stream().collect(Collectors.toMap(element -> element.getName().toLowerCase().charAt(0),Collectors.flatMapping(element->elemen)
-//                  ));
-        HashMap<Character, Set<String>> characters = (HashMap<Character, Set<String>>) authors.stream().collect(Collectors.groupingBy(element->element.getName().toLowerCase().charAt(0)
+        HashMap<Character, Set<String>> characters = (HashMap<Character, Set<String>>) authors.stream().collect(Collectors.groupingBy(element->element.getName().toUpperCase().charAt(0)
                 ,Collectors.mapping(Author::getName,Collectors.toSet()) ));
        System.out.println(characters);
         return characters;
