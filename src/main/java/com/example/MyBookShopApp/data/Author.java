@@ -2,7 +2,7 @@ package com.example.MyBookShopApp.data;
 
 public class Author {
     private Integer id;
-    private String name;
+    private String  name;
 
     public String getName() {
         return name;
