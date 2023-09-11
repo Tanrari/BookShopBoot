@@ -8,6 +8,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 @Controller
 @RequestMapping("/bookshop")
 public class MainPageController {
@@ -40,6 +43,10 @@ public class MainPageController {
     public String mainPage(Model model){
         model.addAttribute("bookData",bookService.getBooksData());
         model.addAttribute("searchPlaceholder","new search placeholder");
+        model.addAttribute("serverTime",new SimpleDateFormat("hh:mm:ss").format(new Date()));
+        model.addAttribute("placeholderTextPart2","SERVER");
+        model.addAttribute("messageTemplate","searchbar.placeholder2");
+
         return "index";
 
     }
